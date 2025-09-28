@@ -27,7 +27,7 @@ export default function GalleryPage() {
     },
     {
       id: 3,
-      src: "/hero.png",
+      src: "/hero1.jpg",
       alt: "Granny Smith Apple Chips",
       category: "products",
       title: "Granny Smith Variety",
@@ -51,7 +51,7 @@ export default function GalleryPage() {
     },
     {
       id: 6,
-      src: "/card.jpg",
+      src: "/image1.jpg",
       alt: "Lime & Chilli Apple Chips",
       category: "products",
       title: "Lime & Chilli",
@@ -59,7 +59,7 @@ export default function GalleryPage() {
     },
     {
       id: 7,
-      src: "/hero.png",
+      src: "/image4.jpg",
       alt: "Farm to table",
       category: "story",
       title: "Farm to Table",
@@ -67,7 +67,7 @@ export default function GalleryPage() {
     },
     {
       id: 8,
-      src: "/story.png",
+      src: "/image3.jpg",
       alt: "Quality control",
       category: "process",
       title: "Quality Control",
@@ -75,7 +75,7 @@ export default function GalleryPage() {
     },
     {
       id: 9,
-      src: "/card.jpg",
+      src: "/image2.jpg",
       alt: "Packaging",
       category: "story",
       title: "Eco-Friendly Packaging",
