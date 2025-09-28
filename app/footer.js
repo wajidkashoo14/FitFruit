@@ -77,11 +77,11 @@ export default function Footer() {
                 </h4>
                 <ul className="space-y-4">
                   {[
-                    { name: 'Contact Us', href: '/contact' },
-                    { name: 'FAQ', href: '/faq' },
-                    { name: 'Shipping', href: '/shipping' },
-                    { name: 'Returns', href: '/returns' },
-                    { name: 'Privacy Policy', href: '/privacy' }
+                    { name: 'Contact Us', href: '/contactus' },
+                    { name: 'FAQ', href: '/' },
+                    { name: 'Shipping', href: '/' },
+                    { name: 'Returns', href: '/' },
+                    { name: 'Privacy Policy', href: '/' }
                   ].map((link, index) => (
                     <li key={index}>
                       <a

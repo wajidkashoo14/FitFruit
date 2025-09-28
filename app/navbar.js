@@ -64,10 +64,10 @@ export default function Navbar() {
             </ul>
 
             {/* CTA Button */}
-            <button className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold px-6 py-2.5 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-2 cursor-pointer">
+            <Link href='/products' className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold px-6 py-2.5 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-2 cursor-pointer">
               <ShoppingBag className="h-4 w-4" />
               <span>Shop Now</span>
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Hamburger */}

@@ -72,9 +72,9 @@ export default function ComingSoonPage() {
             
             {/* Main Heading */}
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-6 leading-tight">
-              Our Products
+            From Orchards To You
               <span className="block bg-gradient-to-r from-red-500 via-yellow-400 to-green-500 bg-clip-text text-transparent">
-                Coming Soon
+              Launching Soon...
               </span>
             </h1>
             
