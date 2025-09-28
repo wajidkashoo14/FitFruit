@@ -12,6 +12,7 @@ import {
   Leaf,
   CheckCircle,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -37,7 +38,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-amber-50 to-lime-50 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-amber-50 to-lime-50">
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-20 w-72 h-72 bg-red-200 rounded-full blur-3xl opacity-20 animate-pulse"></div>
@@ -84,7 +85,7 @@ export default function ContactPage() {
                 {
                   icon: <Mail className="w-7 h-7" />,
                   title: "Email Us",
-                  info: "support@orchips.com",
+                  info: "fitfruitfoodsinfo@gmail.com",
                   subtitle: "We'll respond within 24 hours",
                   color: "from-red-500 to-red-600",
                   bgColor: "from-red-50 to-red-100",
@@ -92,7 +93,7 @@ export default function ContactPage() {
                 {
                   icon: <Phone className="w-7 h-7" />,
                   title: "Call Us",
-                  info: "+91 98765 43210",
+                  info: "+91 6005393956",
                   subtitle: "Mon-Fri, 9 AM - 6 PM IST",
                   color: "from-yellow-500 to-yellow-600",
                   bgColor: "from-yellow-50 to-yellow-100",
@@ -100,7 +101,7 @@ export default function ContactPage() {
                 {
                   icon: <MapPin className="w-7 h-7" />,
                   title: "Visit Us",
-                  info: "Lal Bazar, Srinagar, J&K, India",
+                  info: "Barji, Harwan Rd, Srinagar, New Theed,, J&K, India",
                   subtitle: "Our headquarters in beautiful Kashmir",
                   color: "from-green-500 to-green-600",
                   bgColor: "from-green-50 to-green-100",
@@ -207,7 +208,6 @@ export default function ContactPage() {
                       <input
                         type="text"
                         name="name"
-                        required={true}
                         value={formData.name}
                         onChange={handleInputChange}
                         className="w-full border-2 border-gray-200 rounded-xl px-4 py-4 text-lg focus:border-red-400 focus:outline-none transition-colors duration-300"
@@ -222,7 +222,6 @@ export default function ContactPage() {
                       <input
                         type="email"
                         name="email"
-                        required={true}
                         value={formData.email}
                         onChange={handleInputChange}
                         className="w-full border-2 border-gray-200 rounded-xl px-4 py-4 text-lg focus:border-yellow-400 focus:outline-none transition-colors duration-300"
@@ -245,7 +244,7 @@ export default function ContactPage() {
                     </div>
 
                     <button
-                      // onClick={handleSubmit}
+                      onClick={handleSubmit}
                       className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-4 px-6 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                     >
                       <Send className="w-5 h-5 mr-2" />
@@ -267,12 +266,83 @@ export default function ContactPage() {
                   </p>
                   <button
                     onClick={() => setIsSubmitted(false)}
-                    className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white"
+                    className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     Send Another Message
                   </button>
                 </div>
               )}
+            </div>
+          </div>
+        </div>
+
+        {/* Map Section */}
+        <div className="max-w-7xl mx-auto mt-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Find Us on the Map
+            </h2>
+            <p className="text-lg text-gray-600">
+              Located in the heart of beautiful Kashmir, we're easy to reach and
+              always happy to welcome visitors.
+            </p>
+          </div>
+
+          <div className="relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-red-400 via-yellow-400 to-green-400 rounded-3xl blur opacity-20"></div>
+            <div className="relative bg-white rounded-3xl p-4 shadow-2xl overflow-hidden">
+              {/* Map Container */}
+              <div className="w-full h-96 md:h-[500px] rounded-2xl overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d105641.69748527039!2d74.82420452583219!3d34.16416886738194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x38e187dfb5ff5ba3%3A0x357d98a64f5ecd84!2sBarji%2C%20Harwan%20Rd%2C%20Srinagar%2C%20New%20Theed%2C%20Jammu%20and%20Kashmir%20191121!3m2!1d34.1641964!2d74.9066057!5e0!3m2!1sen!2sin!4v1759057292645!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-2xl"
+                  title="FitFruit Location Map"
+                ></iframe>
+              </div>
+
+              {/* Map Info Cards */}
+              <div className="grid md:grid-cols-2 gap-6 mt-6">
+                <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-6 border-l-4 border-red-500">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                    <MapPin className="h-6 w-6 text-red-500 mr-2" />
+                    Our Location
+                  </h3>
+                  <p className="text-gray-700 mb-2 font-medium">
+                  Barji, Harwan Rd, Srinagar, New Theed
+                  </p>
+                  <p className="text-gray-700 mb-2">Jammu & Kashmir, India</p>
+                  <p className="text-gray-600 text-sm">
+                    In the heart of Kashmir's beautiful Srinagar city,
+                    surrounded by the region's famous apple orchards.
+                  </p>
+                </div>
+
+                <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 border-l-4 border-green-500">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                    <Phone className="h-6 w-6 text-green-500 mr-2" />
+                    Visit Us
+                  </h3>
+                  <p className="text-gray-700 mb-2 font-medium">
+                    Office Hours:
+                  </p>
+                  <p className="text-gray-700 mb-1">
+                    Monday - Friday: 9:00 AM - 6:00 PM
+                  </p>
+                  <p className="text-gray-700 mb-2">
+                    Saturday: 10:00 AM - 4:00 PM
+                  </p>
+                  <p className="text-gray-600 text-sm">
+                    Call ahead to schedule a visit and get a behind-the-scenes
+                    look at our apple chip production!
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -288,12 +358,12 @@ export default function ContactPage() {
               you're here!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <Link href="/products" className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 Shop Now
-              </button>
-              <button className="border-2 border-gray-300 hover:border-red-400 text-gray-700 hover:text-red-600 font-bold py-4 px-8 rounded-full text-lg transition-all duration-300">
+              </Link>
+              <Link  href='/' className="border-2 border-gray-300 hover:border-red-400 text-gray-700 hover:text-red-600 font-bold py-4 px-8 rounded-full text-lg transition-all duration-300">
                 Learn More
-              </button>
+              </Link>
             </div>
           </div>
         </div>

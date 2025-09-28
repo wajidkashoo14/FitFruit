@@ -23,8 +23,8 @@ export default function Home() {
       title: "Pure Apple Goodness",
       subtitle: "Crispy. Natural. Delicious.",
       description:
-        "Experience the perfect crunch with our premium apple chips, baked to golden perfection with zero artificial additives.",
-      cta: "Shop Apple Chips",
+        "Experience the perfect crunch with our premium chips, baked to golden perfection with zero artificial additives.",
+      cta: "Shop",
       image: "/hero1.jpg",
     },
     {
@@ -44,7 +44,6 @@ export default function Home() {
       image: "/hero3.jpg",
     },
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
@@ -500,51 +499,6 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Values Section */}
-          <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#ED1C24]">
-            <div className="max-w-7xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-                <div className="text-center md:col-span-2 lg:col-span-1">
-                  <span className="text-7xl block font-bold text-gray-900">
-                    Simply
-                  </span>
-                  <span className="text-7xl block font-bold text-gray-900">
-                    Real
-                  </span>
-
-                  {/* <p className=" leading-relaxed text-gray-200">
-                    We start with real fruits and vegetables, never artificial
-                    anything.
-                  </p> */}
-                </div>
-                <div className="text-center md:col-span-2 lg:col-span-1">
-                  <span className="text-7xl block font-bold text-gray-900">
-                    Dried
-                  </span>
-                  <span className="text-7xl block font-bold text-gray-900">
-                    Not Fried
-                  </span>
-
-                  {/* <p className="text-gray-600 leading-relaxed">
-                    Our gentle baking process preserves nutrients while creating
-                    the perfect crunch.
-                  </p> */}
-                </div>
-                <div className="text-center md:col-span-2 lg:col-span-1">
-                  <span className="text-7xl block font-bold text-gray-900">
-                    Natural
-                  </span>
-                  <span className="text-7xl block font-bold text-gray-900">
-                    Fresh
-                  </span>
-                  {/* <p className="text-gray-600 leading-relaxed">
-                    No preservatives, no artificial colors, no artificial flavors.
-                    Just pure fruit.
-                  </p> */}
-                </div>
-              </div>
-            </div>
-          </section>
 
           {/* Newsletter Section */}
           <section className="py-16 px-4 sm:px-6 lg:px-8 bg-green-50">

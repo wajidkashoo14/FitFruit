@@ -1,5 +1,6 @@
 import React from "react";
 import { Heart, Leaf, Award, Coffee } from "lucide-react";
+import Image from "next/image";
 
 export default function OurTeamPage() {
   return (
@@ -45,18 +46,20 @@ export default function OurTeamPage() {
           {/* Co-Founder 1 */}
           <div className="group">
             <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-amber-600 to-orange-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative bg-white rounded-2xl p-8 shadow-xl">
-                <div className="relative mb-8">
-                  <div className="w-48 h-48 mx-auto bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center shadow-2xl">
-                    <div className="w-40 h-40 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-6xl font-bold text-amber-600">
-                        SM
-                      </span>
-                    </div>
-                  </div>
-                  <div className="absolute -top-4 -right-4 bg-green-500 rounded-full p-3 shadow-lg">
+                <div className="relative mb-8 flex justify-center items-center">
+                  <div className="relative">
+                    <Image
+                      src="/founder1.jpg"
+                      alt="Founder 2"
+                      width={300}
+                      height={300}
+                      // className="rounded-full object-cover"
+                      className= 'h-[300px] w-[300px] rounded-full object-cover'
+                    />
+                    <div className="absolute -top-4 -right-4 bg-green-500 rounded-full p-3 shadow-lg">
                     <Leaf className="h-6 w-6 text-white" />
+                  </div>
                   </div>
                 </div>
 
@@ -67,20 +70,6 @@ export default function OurTeamPage() {
                   <p className="text-xl text-amber-600 font-semibold mb-4">
                     Co-Founder
                   </p>
-                  {/* <div className="flex justify-center space-x-4 mb-6">
-                    <div className="flex items-center bg-amber-50 rounded-full px-4 py-2">
-                      <Award className="h-4 w-4 text-amber-600 mr-2" />
-                      <span className="text-sm font-medium text-amber-800">
-                        Marketing Management
-                      </span>
-                    </div>
-                    <div className="flex items-center bg-green-50 rounded-full px-4 py-2">
-                      <Leaf className="h-4 w-4 text-green-600 mr-2" />
-                      <span className="text-sm font-medium text-green-800">
-                        Marketing Expert
-                      </span>
-                    </div>
-                  </div> */}
                 </div>
 
                 <div className="text-gray-700 leading-relaxed">
@@ -109,14 +98,14 @@ export default function OurTeamPage() {
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-pink-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative bg-white rounded-2xl p-8 shadow-xl">
-                <div className="relative mb-8">
-                  <div className="w-48 h-48 mx-auto bg-gradient-to-br from-red-400 to-pink-500 rounded-full flex items-center justify-center shadow-2xl">
-                    <div className="w-40 h-40 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-6xl font-bold text-red-600">
-                        MC
-                      </span>
-                    </div>
-                  </div>
+                <div className="relative mb-8 flex justify-center">
+                  <Image
+                    src="/founder2.jpg"
+                    alt="Founder 2"
+                    width={300}
+                    height={300}
+                    className= 'h-[300px] w-[300px] rounded-full object-cover'
+                  />
                   <div className="absolute -top-4 -right-4 bg-blue-500 rounded-full p-3 shadow-lg">
                     <Coffee className="h-6 w-6 text-white" />
                   </div>
@@ -129,20 +118,6 @@ export default function OurTeamPage() {
                   <p className="text-xl text-red-600 font-semibold mb-4">
                     Co-Founder
                   </p>
-                  {/* <div className="flex justify-center space-x-4 mb-6">
-                    <div className="flex items-center bg-red-50 rounded-full px-4 py-2">
-                      <Award className="h-4 w-4 text-red-600 mr-2" />
-                      <span className="text-sm font-medium text-red-800">
-                        Mechanical Engineering
-                      </span>
-                    </div>
-                    <div className="flex items-center bg-blue-50 rounded-full px-4 py-2">
-                      <Coffee className="h-4 w-4 text-blue-600 mr-2" />
-                      <span className="text-sm font-medium text-blue-800">
-                        Operations Guru
-                      </span>
-                    </div>
-                  </div> */}
                 </div>
 
                 <div className="text-gray-700 leading-relaxed">
@@ -180,11 +155,16 @@ export default function OurTeamPage() {
 
               <div className="max-w-4xl mx-auto text-center">
                 <p className="text-xl text-gray-700 leading-relaxed mb-8">
-                  Faizan and Sahil met at a farmers market in 2019, both
-                  reaching for the same bag of locally-grown Honeycrisp apples.
-                  That serendipitous moment sparked not just a friendship, but a
-                  shared vision: to create the perfect apple chip that captures
-                  the essence of orchard-fresh fruit.
+                  Our story starts in 2014 when Faizan and Sahil became friends
+                  in 11th grade. We went through high school together, sharing
+                  interests and studying for exams. Although we chose different
+                  paths – Faizan in business studies and Sahil in engineering –
+                  our entrepreneurial spirit stayed strong. As we noticed people
+                  wanting healthier options, we saw a chance to make a
+                  difference. We were inspired by the challenges faced by
+                  orchard owners and decided to start Fitfruit Foods. Our goal
+                  is to create healthier snacks and drinks, driven by our
+                  friendship and commitment to a better future.
                 </p>
 
                 <div className="grid md:grid-cols-3 gap-8 mt-12">
@@ -244,6 +224,5 @@ export default function OurTeamPage() {
         </div>
       </div>
     </div>
-    
   );
 }

@@ -1,6 +1,7 @@
 "use client"
 import React from 'react';
 import { Heart, Leaf, Mail, Phone, MapPin, Facebook, Instagram, Twitter, ArrowUp } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -27,12 +28,7 @@ export default function Footer() {
               {/* Brand Section */}
               <div className="lg:col-span-1 space-y-6">
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 via-yellow-400 to-green-500 rounded-full flex items-center justify-center shadow-lg">
-                    <Leaf className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-3xl font-bold bg-gradient-to-r from-red-400 via-yellow-400 to-green-400 bg-clip-text text-transparent">
-                    FitFruit
-                  </h3>
+                <Image src="/footericon.png" alt='icon' height={200} width={400} objectFit='contain' className='h-[100px] w-[250px] object-cover' />
                 </div>
                 <p className="text-gray-300 leading-relaxed text-lg">
                   Healthy snacking made simple with real fruits and natural ingredients. 
@@ -57,7 +53,7 @@ export default function Footer() {
                     { name: 'Home', href: '/' },
                     { name: 'Our Story', href: '/ourstory' },
                     { name: 'Products', href: '/products' },
-                    { name: 'Our Team', href: '/team' },
+                    { name: 'Our Team', href: '/ourteam' },
                     { name: 'Blog', href: '/blog' }
                   ].map((link, index) => (
                     <li key={index}>
@@ -111,15 +107,15 @@ export default function Footer() {
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center space-x-3 text-gray-300">
                     <Mail className="h-5 w-5 text-red-400" />
-                    <span className="text-sm">support@orchips.com</span>
+                    <span className="text-sm">fitfruitfoodsinfo@gmail.com</span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-300">
                     <Phone className="h-5 w-5 text-yellow-400" />
-                    <span className="text-sm">+91 98765 43210</span>
+                    <span className="text-sm">+91 6005393956</span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-300">
                     <MapPin className="h-5 w-5 text-green-400" />
-                    <span className="text-sm">Lal Bazar, Srinagar, J&K</span>
+                    <span className="text-sm">Barji, Harwan Rd, Srinagar, New Theed, J and K 191121</span>
                   </div>
                 </div>
 
@@ -207,10 +203,10 @@ export default function Footer() {
               
               <button
                 onClick={scrollToTop}
-                className="group bg-gradient-to-r from-red-500 via-yellow-400 to-green-500 hover:from-red-600 hover:via-yellow-500 hover:to-green-600 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+                className="group bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
                 aria-label="Scroll to top"
               >
-                <ArrowUp className="h-5 w-5 text-white group-hover:animate-bounce" />
+                <ArrowUp className="h-5 w-5 text-white group-hover:animate-bounce cursor-pointer" />
               </button>
             </div>
           </div>
