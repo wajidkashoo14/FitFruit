@@ -247,7 +247,7 @@ export default function ContactPage() {
                       onClick={handleSubmit}
                       className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-4 px-6 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                     >
-                      <Send className="w-5 h-5 mr-2" />
+                      <Send className="w-5 h-5 mr-2"/>
                       Send Message
                     </button>
                   </div>
