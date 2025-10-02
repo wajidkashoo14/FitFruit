@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heart, Leaf, Users, Award, ArrowDown } from 'lucide-react';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 export default function OurStory() {
   return (

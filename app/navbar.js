@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, Leaf, ShoppingBag, Heart } from "lucide-react";
 import Image from "next/image";
-import Link from "next/Link";
+import Link from 'next/link';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
