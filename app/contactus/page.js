@@ -314,7 +314,7 @@ export default function ContactPage() {
                     Our Location
                   </h3>
                   <p className="text-gray-700 mb-2 font-medium">
-                  Barji, Harwan Rd, Srinagar, New Theed
+                  Harwan Rd, Srinagar, New Theed
                   </p>
                   <p className="text-gray-700 mb-2">Jammu & Kashmir, India</p>
                   <p className="text-gray-600 text-sm">

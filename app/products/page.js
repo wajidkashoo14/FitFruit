@@ -13,26 +13,6 @@ export default function ComingSoonPage() {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
 
-  // // Countdown timer effect
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     setTimeLeft(prevTime => {
-  //       if (prevTime.seconds > 0) {
-  //         return { ...prevTime, seconds: prevTime.seconds - 1 };
-  //       } else if (prevTime.minutes > 0) {
-  //         return { ...prevTime, minutes: prevTime.minutes - 1, seconds: 59 };
-  //       } else if (prevTime.hours > 0) {
-  //         return { ...prevTime, hours: prevTime.hours - 1, minutes: 59, seconds: 59 };
-  //       } else if (prevTime.days > 0) {
-  //         return { ...prevTime, days: prevTime.days - 1, hours: 23, minutes: 59, seconds: 59 };
-  //       }
-  //       return prevTime;
-  //     });
-  //   }, 1000);
-
-  //   return () => clearInterval(timer);
-  // }, []);
-
   const handleSubscribe = (e) => {
     e.preventDefault();
     if (email) {
@@ -86,31 +66,6 @@ export default function ComingSoonPage() {
             </p>
           </div>
 
-          {/* Countdown Timer
-          <div className="mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Launch Countdown</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
-              {[
-                { label: 'Days', value: timeLeft.days },
-                { label: 'Hours', value: timeLeft.hours },
-                { label: 'Minutes', value: timeLeft.minutes },
-                { label: 'Seconds', value: timeLeft.seconds }
-              ].map((item, index) => (
-                <div key={item.label} className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-red-400 via-yellow-400 to-green-400 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-300"></div>
-                  <div className="relative bg-white rounded-2xl p-6 shadow-xl">
-                    <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
-                      {item.value.toString().padStart(2, '0')}
-                    </div>
-                    <div className="text-sm md:text-base font-medium text-gray-600 uppercase tracking-wide">
-                      {item.label}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div> */}
-
           {/* Features Preview */}
           <div className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-12">What to Expect</h2>
@@ -147,75 +102,6 @@ export default function ComingSoonPage() {
               ))}
             </div>
           </div>
-
-          {/* Email Subscription */}
-          {/* <div className="mb-16">
-            <div className="max-w-2xl mx-auto">
-              <div className="bg-white bg-opacity-80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl">
-                <div className="flex items-center justify-center mb-6">
-                  <Bell className="h-8 w-8 text-red-500 mr-3" />
-                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Be the First to Know</h2>
-                </div>
-                
-                <p className="text-lg text-gray-600 mb-8">
-                  Join our exclusive list and get notified the moment our apple chips are available, 
-                  plus receive a special launch discount!
-                </p>
-                
-                {!isSubscribed ? (
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <div className="flex-1 relative">
-                      <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                      <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="Enter your email address"
-                        className="w-full pl-12 pr-4 py-4 rounded-xl border-2 border-gray-200 focus:border-red-400 focus:outline-none text-lg"
-                      />
-                    </div>
-                    <button
-                      onClick={handleSubscribe}
-                      className="bg-gradient-to-r from-red-500 via-yellow-400 to-green-500 hover:from-red-600 hover:via-yellow-500 hover:to-green-600 text-white font-bold py-4 px-8 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
-                    >
-                      <span className="mr-2">Notify Me</span>
-                      <ArrowRight className="h-5 w-5" />
-                    </button>
-                  </div>
-                ) : (
-                  <div className="text-center">
-                    <div className="inline-flex items-center bg-green-100 text-green-800 rounded-full px-6 py-3 font-semibold">
-                      <Heart className="h-5 w-5 mr-2" />
-                      Thank you! You'll be the first to know!
-                    </div>
-                  </div>
-                )}
-                
-                <p className="text-sm text-gray-500 mt-4">
-                  * We promise not to spam. You can unsubscribe at any time.
-                </p>
-              </div>
-            </div>
-          </div> */}
-
-          {/* Social Proof */}
-          {/* <div className="text-center">
-            <p className="text-lg text-gray-600 mb-6">Join thousands of health-conscious snackers waiting for FitFruit</p>
-            <div className="flex justify-center items-center space-x-8 text-sm text-gray-500">
-              <div className="flex items-center">
-                <div className="w-2 h-2 bg-red-400 rounded-full mr-2"></div>
-                <span>5,000+ Pre-orders</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
-                <span>Zero Artificial Ingredients</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-                <span>Farm-to-Snack Fresh</span>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

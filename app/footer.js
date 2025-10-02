@@ -1,11 +1,22 @@
-"use client"
-import React from 'react';
-import { Heart, Leaf, Mail, Phone, MapPin, Facebook, Instagram, Twitter, ArrowUp } from 'lucide-react';
-import Image from 'next/image';
+"use client";
+import React from "react";
+import {
+  Heart,
+  Leaf,
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Instagram,
+  Twitter,
+  ArrowUp,
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/Link";
 
 export default function Footer() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -21,17 +32,23 @@ export default function Footer() {
         {/* Main Footer Content */}
         <div className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            
             {/* Top Section */}
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-12">
-              
               {/* Brand Section */}
               <div className="lg:col-span-1 space-y-6">
                 <div className="flex items-center space-x-3">
-                <Image src="/footericon.png" alt='icon' height={200} width={400} objectFit='contain' className='h-[100px] w-[250px] object-cover' />
+                  <Image
+                    src="/footericon.png"
+                    alt="icon"
+                    height={200}
+                    width={400}
+                    objectFit="contain"
+                    className="h-[100px] w-[250px] object-cover"
+                  />
                 </div>
                 <p className="text-gray-300 leading-relaxed text-lg">
-                  Healthy snacking made simple with real fruits and natural ingredients. 
+                  Healthy snacking made simple with real fruits and natural
+                  ingredients.
                   <span className="block mt-2 font-semibold italic text-yellow-400">
                     Zero Junk. All Joy.
                   </span>
@@ -50,11 +67,11 @@ export default function Footer() {
                 </h4>
                 <ul className="space-y-4">
                   {[
-                    { name: 'Home', href: '/' },
-                    { name: 'Our Story', href: '/ourstory' },
-                    { name: 'Products', href: '/products' },
-                    { name: 'Our Team', href: '/ourteam' },
-                    { name: 'Blog', href: '/blog' }
+                    { name: "Home", href: "/" },
+                    { name: "Our Story", href: "/ourstory" },
+                    { name: "Products", href: "/products" },
+                    { name: "Our Team", href: "/ourteam" },
+                    { name: "Blog", href: "/blog" },
                   ].map((link, index) => (
                     <li key={index}>
                       <a
@@ -77,11 +94,11 @@ export default function Footer() {
                 </h4>
                 <ul className="space-y-4">
                   {[
-                    { name: 'Contact Us', href: '/contactus' },
-                    { name: 'FAQ', href: '/' },
-                    { name: 'Shipping', href: '/' },
-                    { name: 'Returns', href: '/' },
-                    { name: 'Privacy Policy', href: '/' }
+                    { name: "Contact Us", href: "/contactus" },
+                    { name: "FAQ", href: "/" },
+                    { name: "Shipping", href: "/" },
+                    { name: "Returns", href: "/" },
+                    { name: "Privacy Policy", href: "/" },
                   ].map((link, index) => (
                     <li key={index}>
                       <a
@@ -102,7 +119,7 @@ export default function Footer() {
                   <div className="w-2 h-6 bg-gradient-to-b from-green-400 to-green-600 rounded-full mr-3"></div>
                   Get in Touch
                 </h4>
-                
+
                 {/* Contact Info */}
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center space-x-3 text-gray-300">
@@ -115,33 +132,37 @@ export default function Footer() {
                   </div>
                   <div className="flex items-center space-x-3 text-gray-300">
                     <MapPin className="h-5 w-5 text-green-400" />
-                    <span className="text-sm">Barji, Harwan Rd, Srinagar, New Theed, J and K 191121</span>
+                    <span className="text-sm">
+                      Harwan Rd, Srinagar, New Theed, J and K 191121
+                    </span>
                   </div>
                 </div>
 
                 {/* Social Links */}
                 <div>
-                  <p className="text-gray-400 text-sm mb-4">Follow our journey:</p>
+                  <p className="text-gray-400 text-sm mb-4">
+                    Follow our journey:
+                  </p>
                   <div className="flex space-x-4">
                     {[
-                      { 
-                        icon: <Facebook className="h-5 w-5" />, 
+                      {
+                        icon: <Facebook className="h-5 w-5" />,
                         href: "https://www.facebook.com/share/19Dw7oSTGB/",
                         color: "from-blue-500 to-blue-600",
-                        label: "Facebook"
+                        label: "Facebook",
                       },
-                      { 
-                        icon: <Instagram className="h-5 w-5" />, 
+                      {
+                        icon: <Instagram className="h-5 w-5" />,
                         href: "https://www.instagram.com/fitfruitfoods?igsh=MXBwYm5zMjRxNHQ3YQ==",
                         color: "from-pink-500 to-purple-500",
-                        label: "Instagram"
+                        label: "Instagram",
                       },
-                      { 
-                        icon: <Twitter className="h-5 w-5" />, 
+                      {
+                        icon: <Twitter className="h-5 w-5" />,
                         href: "https://x.com/fitfruitfoods?t=l9SQddSjimSyeMubHcYoOA&s=08",
                         color: "from-blue-400 to-cyan-400",
-                        label: "Twitter"
-                      }
+                        label: "Twitter",
+                      },
                     ].map((social, index) => (
                       <a
                         key={index}
@@ -151,9 +172,7 @@ export default function Footer() {
                         className={`group relative bg-gradient-to-r ${social.color} p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110`}
                         aria-label={social.label}
                       >
-                        <div className="text-white">
-                          {social.icon}
-                        </div>
+                        <div className="text-white">{social.icon}</div>
                         <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
                           {social.label}
                         </div>
@@ -167,8 +186,13 @@ export default function Footer() {
             {/* Newsletter Section */}
             <div className="bg-gradient-to-r from-red-500/10 via-yellow-500/10 to-green-500/10 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-gray-700">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-3">Stay Updated with FitFruit</h3>
-                <p className="text-gray-300">Get the latest updates on new products, health tips, and special offers!</p>
+                <h3 className="text-2xl font-bold mb-3">
+                  Stay Updated with FitFruit
+                </h3>
+                <p className="text-gray-300">
+                  Get the latest updates on new products, health tips, and
+                  special offers!
+                </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                 <input
@@ -185,28 +209,55 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-700 bg-black bg-opacity-50 backdrop-blur-sm">
+        <div className="border-t border-gray-300 bg-black bg-opacity-60 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <div className="flex items-center space-x-4 mb-4 md:mb-0">
-                <p className="text-gray-400 text-sm">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-center">
+              {/* Left - Copyright */}
+              <div className="flex flex-col md:flex-row items-center space-x-0 md:space-x-4 space-y-2 md:space-y-0">
+                <p className="text-gray-600 text-sm font-medium">
                   &copy; 2025 FitFruit. All rights reserved.
                 </p>
-                <div className="hidden md:flex items-center space-x-4 text-xs text-gray-500">
-                  <a href="/terms" className="hover:text-gray-300 transition-colors">Terms</a>
+                <div className="flex items-center space-x-4 text-xs text-gray-500">
+                  <a
+                    href="/terms"
+                    className="hover:text-gray-700 transition-colors font-medium"
+                  >
+                    Terms
+                  </a>
                   <span>•</span>
-                  <a href="/privacy" className="hover:text-gray-300 transition-colors">Privacy</a>
+                  <a
+                    href="/privacy"
+                    className="hover:text-gray-700 transition-colors font-medium"
+                  >
+                    Privacy
+                  </a>
                   <span>•</span>
-                  <a href="/cookies" className="hover:text-gray-300 transition-colors">Cookies</a>
+                  <a
+                    href="/cookies"
+                    className="hover:text-gray-700 transition-colors font-medium"
+                  >
+                    Cookies
+                  </a>
                 </div>
               </div>
-              
+
+              {/* Center - Developer Credit */}
+              <Link
+                href="https://wajidkashoo-portfolio.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-semibold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent hover:from-green-700 hover:to-emerald-700 transition-all duration-300 whitespace-nowrap"
+              >
+                Designed and Developed by Wajid Kashoo
+              </Link>
+
+              {/* Right - Scroll Button */}
               <button
                 onClick={scrollToTop}
                 className="group bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
                 aria-label="Scroll to top"
               >
-                <ArrowUp className="h-5 w-5 text-white group-hover:animate-bounce cursor-pointer" />
+                <ArrowUp className="h-5 w-5 text-white group-hover:animate-bounce" />
               </button>
             </div>
           </div>
