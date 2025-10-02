@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Menu, X, Leaf, ShoppingBag, Heart } from "lucide-react";
-import Link from "next/link";
+import Link from "next/Link";
 import Image from "next/image";
 
 export default function Navbar() {
