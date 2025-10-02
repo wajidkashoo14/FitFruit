@@ -98,7 +98,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={`md:hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
         } overflow-hidden bg-white/95 backdrop-blur-md border-t border-gray-200`}
       >
         <div className="px-4 py-6 space-y-4">
