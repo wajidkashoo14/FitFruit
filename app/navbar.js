@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Menu, X, Leaf, ShoppingBag, Heart } from "lucide-react";
-import Link from "next/Link";
 import Image from "next/image";
+import Link from "next/Link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -103,7 +103,7 @@ export default function Navbar() {
       >
         <div className="px-4 py-6 space-y-4">
           {navLinks.map((link, index) => (
-            <a
+            <Link
               key={index}
               href={link.href}
               className="flex items-center space-x-3 p-3 rounded-xl text-gray-700 hover:bg-gradient-to-r hover:from-red-50 hover:via-yellow-50 hover:to-green-50 hover:text-gray-900 transition-all duration-300 group"
@@ -111,7 +111,7 @@ export default function Navbar() {
             >
               <div className="w-2 h-2 rounded-full bg-gradient-to-r from-red-400 to-green-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="font-medium">{link.name}</span>
-            </a>
+            </Link>
           ))}
 
           {/* Mobile CTA */}

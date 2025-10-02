@@ -12,7 +12,7 @@ import {
   Leaf,
   CheckCircle,
 } from "lucide-react";
-import Link from "next/link";
+import Link from "next/Link";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
